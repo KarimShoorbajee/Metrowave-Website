@@ -1,0 +1,117 @@
+@import "compass";
+@import "partials/variables";
+@import "partials/normalize";
+
+body
+{
+  margin: 0;
+  padding: 0;
+}
+.metrotext
+{
+  color:white;
+  font-style: italic;
+  font-size:100px;
+  position:relative;
+  width:100%;
+  margin:0 auto;
+  font-family: 'Heebo', sans-serif;
+  text-align: center;
+}
+@keyframes noise-anim{
+  $steps:20;
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      clip:rect(random(100)+px,9999px,random(100)+px,0);
+    }
+  }
+}
+.metrotext:after{
+  width:100%;
+  content:attr(data-text);
+  position:absolute;
+  left:1px;
+  text-shadow:-3px 0 #798afc;
+  top:0;
+  color:#f9f9f9;
+  background:#b49ab7;
+  overflow:hidden;
+  clip:rect(0,900px,0,0);
+  animation:noise-anim 3s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim-2{
+  $steps:20;
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      clip:rect(random(100)+px,9999px,random(100)+px,0);
+    }
+  }
+}
+.metrotext:before{
+  width:100%;
+  content:attr(data-text);
+  position:absolute;
+  left:-1px;
+  text-shadow:3px 0 #ff7a7a;
+  top:0;
+  color:#f9f9f9;
+  background:#b49ab7;
+  overflow:hidden;
+  clip:rect(0,900px,0,0);
+  animation:noise-anim-2 1s infinite linear alternate-reverse;
+}
+
+.c1
+{
+  background-color: #b49ab7;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.merchbox
+{
+  font-family: 'Heebo', sans-serif;
+  font-size: 30px;
+  background-color: #ff7a7a;
+  font-style: italic;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0;
+}
+
+/*
+.merchbox:hover
+{
+  box-shadow: inset 0 0 0 10px #333;
+}
+*/
+
+.musicbox
+{
+  font-family: 'Heebo', sans-serif;
+  font-size: 30px;
+  font-style: italic;
+  background-color:#798afc;
+  height: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0;
+}
+
+/*.musicbox:hover
+{
+  box-shadow: inset 0 0 0 10px #333;
+}
+*/
+
+.metrobox
+{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
