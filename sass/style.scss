@@ -30,7 +30,7 @@ body
   width:100%;
   content:attr(data-text);
   position:absolute;
-  left:1px;
+  left:2px;
   text-shadow:-3px 0 #798afc;
   top:0;
   color:#f9f9f9;
@@ -53,7 +53,7 @@ body
   content:attr(data-text);
   position:absolute;
   left:-1px;
-  text-shadow:3px 0 #ff7a7a;
+  text-shadow:2px 0 #ff7a7a;
   top:0;
   color:#f9f9f9;
   background:#b49ab7;
@@ -81,14 +81,18 @@ body
   padding-left: 0;
   padding-right: 0;
   margin: 0;
+  text-decoration: underline;
+  text-decoration-color: #ff7a7a;
+  transition: text-decoration-color 0.5s, box-shadow 0.5s;
 }
 
-/*
+
 .merchbox:hover
 {
-  box-shadow: inset 0 0 0 10px #333;
+  box-shadow: inset 10px 10px 0 0 #333;
+  text-decoration-color: #333;
 }
-*/
+
 
 .musicbox
 {
@@ -102,13 +106,18 @@ body
   padding-left: 0;
   padding-right: 0;
   margin: 0;
+  transition: box-shadow 0.5s ease;
+  text-decoration: underline;
+  text-decoration-color: #798afc;
+  transition: text-decoration-color 0.5s, box-shadow 0.5s;
 }
 
-/*.musicbox:hover
+.musicbox:hover
 {
-  box-shadow: inset 0 0 0 10px #333;
+  box-shadow: inset -10px 10px 0 0 #333;
+  text-decoration-color: #333;
 }
-*/
+
 
 .metrobox
 {
