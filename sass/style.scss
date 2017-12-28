@@ -2,6 +2,10 @@
 @import "partials/variables";
 @import "partials/normalize";
 
+body, html .container-fluid{
+     height: 100%;
+}
+
 body
 {
   margin: 0;
@@ -62,19 +66,10 @@ body
   animation:noise-anim-2 1s infinite linear alternate-reverse;
 }
 
-.c1
-{
-  background-color: #b49ab7;
-  position: absolute;
-  width: 100%;
-  z-index: -1;
-}
-
-.merchbox
+.artistBox
 {
   font-family: 'Heebo', sans-serif;
   font-size: 30px;
-  background-color: #ff7a7a;
   font-style: italic;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -82,45 +77,55 @@ body
   padding-right: 0;
   margin: 0;
   text-decoration: underline;
+  transition: text-decoration-color 0.5s, box-shadow 0.5s;
+  height: 50vh;
+}
+
+.zekeBox
+{
   text-decoration-color: #ff7a7a;
-  transition: text-decoration-color 0.5s, box-shadow 0.5s;
+  background-color: #ff7a7a;
 }
 
-
-.merchbox:hover
+.kurlBox
 {
-  box-shadow: inset 10px 10px 0 0 #333;
-  text-decoration-color: #333;
-}
-
-
-.musicbox
-{
-  font-family: 'Heebo', sans-serif;
-  font-size: 30px;
-  font-style: italic;
   background-color:#798afc;
-  height: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 0;
-  padding-right: 0;
-  margin: 0;
-  transition: box-shadow 0.5s ease;
-  text-decoration: underline;
   text-decoration-color: #798afc;
-  transition: text-decoration-color 0.5s, box-shadow 0.5s;
 }
 
-.musicbox:hover
+.apogeeBox
 {
-  box-shadow: inset -10px 10px 0 0 #333;
+  background-color:#92cca6;
+  text-decoration-color: #92cca6;
+}
+
+.artistBox:hover
+{
+  box-shadow: inset 0px 0px 0px 10px #333;
   text-decoration-color: #333;
 }
 
-
-.metrobox
+.headerRow
 {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  background:#b49ab7;
+}
+
+.c1, .headerRow, .artistRow, .merchRow
+{
+  width: 100%;
+  padding: 0;
+  margin:0;
+}
+
+
+.headerRow, .merchRow
+{
+  height: 25vh;
+}
+
+.artistRow
+{
+  height: 50vh;
+  padding: 0;
+  margin: 0;
 }
